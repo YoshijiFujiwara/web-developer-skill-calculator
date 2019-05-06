@@ -66,8 +66,67 @@
               web-assembly(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableFront10")
 
         // back-end tree
-        div.skilltree#backend-tree.mx-3
-            git
+        div.skilltree#backend-tree.mr-3(:style="backSkillTreeStyle")
+          div.inner-skilltree.px-2.pt-3(:style="backSkillTreeInnerStyle")
+            h1#backend-skilltree-title BACKEND {{currentBackendPoint}}
+            // 第1階層(言語一覧)
+            v-layout.mb-3(row justify-space-between)
+              python(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack1")
+              ruby-skill(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack1")
+              php(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack1")
+              node(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack1")
+            // 第1階層(言語一覧)
+            v-layout.mb-3(row justify-space-between)
+              elixir(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack1")
+              scala(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack1")
+              erlang(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack1")
+              clojure(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack1")
+              haskell(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack1")
+            // 第1階層(言語一覧)
+            v-layout.mb-3(row justify-space-between)
+              golang(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack1")
+              rust(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack1")
+              java(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack1")
+              n-e-t(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack1")
+            // 第2階層
+            v-layout.mb-3(row justify-space-between)
+              command-line-application(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack2")
+              backend-package-manager(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack2")
+              standard-and-best-practice(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack2")
+            // 第3階層
+            v-layout.mb-3(row justify-space-between)
+              make-package-or-library(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack3")
+              backend-testing(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack3")
+              test-for-practical-step(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack3")
+            // 第4階層
+            v-layout.mb-3(row justify-space-between)
+              relational-database(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack4")
+              basic-crud(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack4")
+            // 第5階層
+            v-layout.mb-3(row justify-center)
+              framework(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack5")
+            // 第6階層
+            v-layout.mb-3(row justify-space-between)
+              no-sql(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack6")
+              caching(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack6")
+              create-r-e-s-t-ful-a-p-i(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack6")
+            // 第7階層
+            v-layout.mb-3(row justify-space-between)
+              authentication(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack7")
+              message-brokers(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack7")
+              search-engine(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack7")
+            // 第8階層
+            v-layout.mb-3(row justify-space-between)
+              docker(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack8")
+              web-server(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack8")
+              web-socket(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack8")
+            // 第9階層
+            v-layout.mb-3(row justify-space-between)
+              graph-q-l(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack9")
+              graph-database(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack9")
+            // 第10階層
+            v-layout.mb-3(row justify-center)
+              more(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack10")
 
         // dev-ops tree
         div.skilltree#devops-tree.ml-3
@@ -114,6 +173,44 @@
   import Mobile from '~/components/frontend-skills/Mobile';
   import WebAssembly from '~/components/frontend-skills/WebAssembly';
 
+  // backend
+  import Clojure from '~/components/backend-skills/lang/Clojure';
+  import Elixir from '~/components/backend-skills/lang/Elixir';
+  import Erlang from '~/components/backend-skills/lang/Erlang';
+  import Golang from '~/components/backend-skills/lang/Golang';
+  import Haskell from '~/components/backend-skills/lang/Haskell';
+  import Java from '~/components/backend-skills/lang/Java';
+  import NET from '~/components/backend-skills/lang/NET';
+  import Node from '~/components/backend-skills/lang/Node';
+  import Python from '~/components/backend-skills/lang/Python';
+  import Php from '~/components/backend-skills/lang/Php';
+  import RubySkill from '~/components/backend-skills/lang/Ruby';
+  import Rust from '~/components/backend-skills/lang/Rust';
+  import Scala from '~/components/backend-skills/lang/Scala';
+
+  import Authentication from '~/components/backend-skills/Authentication';
+  import BasicCrud from '~/components/backend-skills/BasicCrud';
+  import Caching from '~/components/backend-skills/Caching';
+  import CommandLineApplication from '~/components/backend-skills/CommandLineApplication';
+  import CreateRESTFulAPI from '~/components/backend-skills/CreateRESTFulAPI';
+  import Docker from '~/components/backend-skills/Docker';
+  import Framework from '~/components/backend-skills/Framework';
+  import GraphDatabase from '~/components/backend-skills/GraphDatabase';
+  import GraphQL from '~/components/backend-skills/GraphQL';
+  import MakePackageOrLibrary from '~/components/backend-skills/MakePackageOrLibrary';
+  import MessageBrokers from '~/components/backend-skills/MessageBrokers';
+  import More from '~/components/backend-skills/More';
+  import NoSql from '~/components/backend-skills/NoSql';
+  import BackendPackageManager from '~/components/backend-skills/PackageManager';
+  import RelationalDatabase from '~/components/backend-skills/RelationalDatabase';
+  import SearchEngine from '~/components/backend-skills/SearchEngine';
+  import StandardAndBestPractice from '~/components/backend-skills/StandardAndBestPractice';
+  import TestForPracticalStep from '~/components/backend-skills/TestForPracticalStep';
+  import BackendTesting from '~/components/backend-skills/Testing';
+  import WebServer from '~/components/backend-skills/WebServer';
+  import WebSocket from '~/components/backend-skills/WebSocket';
+
+
   export default {
     components: {
       Skill,
@@ -149,12 +246,54 @@
       StaticSiteGenerator,
       Desktop,
       Mobile,
-      WebAssembly
+      WebAssembly,
+
+      Clojure,
+      Elixir,
+      Erlang,
+      Golang,
+      Haskell,
+      Java,
+      NET,
+      Node,
+      Php,
+      Python,
+      RubySkill,
+      Rust,
+      Scala,
+
+      Authentication,
+      BasicCrud,
+      Caching,
+      CommandLineApplication,
+      CreateRESTFulAPI,
+      Docker,
+      Framework,
+      GraphDatabase,
+      GraphQL,
+      MakePackageOrLibrary,
+      MessageBrokers,
+      More,
+      NoSql,
+      BackendPackageManager,
+      RelationalDatabase,
+      SearchEngine,
+      StandardAndBestPractice,
+      TestForPracticalStep,
+      BackendTesting,
+      WebServer,
+      WebSocket
     },
     data() {
       return {
         star,
         skillDialog: false,
+
+        // それぞれのスキルツリーの基準値
+        baseBorder: 10,
+        frontendBorder: 30,
+        backendBorder: 30,
+        devopsBorder: 30,
 
         // それぞれのスキルツリーのポイント合計値
         baseSkillPointData: {},
@@ -196,6 +335,43 @@
         frontDesktop: 0,
         frontMobile: 0,
         frontWebAssembly: 0,
+
+        // backend のそれぞれのポイント
+        backClojure: 0,
+        backElixir: 0,
+        backErlang: 0,
+        backGolang: 0,
+        backHaskell: 0,
+        backJava: 0,
+        backNET: 0,
+        backNode: 0,
+        backPhp: 0,
+        backPython: 0,
+        backRubySkill: 0,
+        backRust: 0,
+        backScala: 0,
+
+        backAuthentication: 0,
+        backBasicCrud: 0,
+        backCaching: 0,
+        backCommandLineApplication: 0,
+        backCreateRESTFulAPI: 0,
+        backDocker: 0,
+        backFramework: 0,
+        backGraphDatabase: 0,
+        backGraphQL: 0,
+        backMakePackageOrLibrary: 0,
+        backMessageBrokers: 0,
+        backMore: 0,
+        backNoSql: 0,
+        backBackendPackageManager: 0,
+        backRelationalDatabase: 0,
+        backSearchEngine: 0,
+        backStandardAndBestPractice: 0,
+        backTestForPracticalStep: 0,
+        backBackendTesting: 0,
+        backWebServer: 0,
+        backWebSocket: 0,
       }
     },
     methods: {
@@ -222,14 +398,14 @@
         return sum;
       },
       baseSkillTreeStyle() {
-        if (this.currentBasePoint < 10) {
+        if (this.currentBasePoint < this.baseBorder) {
           return `background-color: lightgrey`;
         } else {
           return `background-color: yellow`;
         }
       },
       baseSkillTreeInnerStyle() {
-        const border = (this.currentBasePoint / 10) * 100;
+        const border = (this.currentBasePoint / this.baseBorder) * 100;
         return `background:linear-gradient(180deg,#c7ce00 -30%,#c7ce00 ${border}%,grey ${border}%,grey 150%);`;
       },
 
@@ -239,48 +415,62 @@
         return sum;
       },
       frontSkillTreeStyle() {
-        if (this.currentFrontPoint < 50) {
+        if (this.currentFrontPoint < this.frontendBorder) {
           return `background-color: lightgrey`;
         } else {
           return `background-color: lightgreen`;
         }
       },
       frontSkillTreeInnerStyle() {
-        const border = (this.currentFrontPoint / 50) * 100;
+        const border = (this.currentFrontPoint / this.frontendBorder) * 100;
         return `background:linear-gradient(180deg,green -30%,green ${border}%,grey ${border}%,grey 150%);`;
       },
 
       // ポイント加算条件
-      clickableFront1() {
-        return this.currentBasePoint >= 10;
+      clickableFront1() {return this.currentBasePoint >= this.baseBorder;},
+      clickableFront2() {return this.currentBasePoint >= this.baseBorder && this.currentFrontPoint >= 3 * 1;},
+      clickableFront3() {return this.currentBasePoint >= this.baseBorder && this.currentFrontPoint >= 3 * 2;},
+      clickableFront4() {return this.currentBasePoint >= this.baseBorder && this.currentFrontPoint >= 3 * 3;},
+      clickableFront5() {return this.currentBasePoint >= this.baseBorder && this.currentFrontPoint >= 3 * 4;},
+      clickableFront6() {return this.currentBasePoint >= this.baseBorder && this.currentFrontPoint >= 3 * 5;},
+      clickableFront7() {return this.currentBasePoint >= this.baseBorder && this.currentFrontPoint >= 3 * 6;},
+      clickableFront8() {return this.currentBasePoint >= this.baseBorder && this.currentFrontPoint >= 3 * 7;},
+      clickableFront9() {return this.currentBasePoint >= this.baseBorder && this.currentFrontPoint >= 3 * 8;},
+      clickableFront10() {return this.currentBasePoint >= this.baseBorder && this.currentFrontPoint >= 3 * 9;},
+
+
+      // backend
+      currentBackendPoint() {
+        const sum = this.backClojure + this.backElixir + this.backErlang + this.backHaskell + this.backGolang + this.backHaskell + this.backJava +
+                      this.backNET + this.backNode + this.backPhp + this.backPython + this.backRubySkill + this.backRust + this.backScala +
+                      this.backAuthentication + this.backBasicCrud + this.backCaching + this.backCommandLineApplication + this.backCreateRESTFulAPI +
+                      this.backDocker + this.backFramework + this.backGraphDatabase + this.backGraphQL + this.backMakePackageOrLibrary + this.backMessageBrokers +
+                      this.backMore + this.backNoSql + this.backBackendPackageManager + this.backRelationalDatabase + this.backSearchEngine + this.backStandardAndBestPractice +
+                      this.backTestForPracticalStep + this.backBackendTesting + this.backWebServer + this.backWebSocket;
+        return sum;
       },
-      clickableFront2() {
-        return this.currentBasePoint >= 10 && this.currentFrontPoint >= 5;
+      backSkillTreeStyle() {
+        if (this.currentBackendPoint < this.backendBorder) {
+          return `background-color: lightgrey`;
+        } else {
+          return `background-color: lightblue`;
+        }
       },
-      clickableFront3() {
-        return this.currentBasePoint >= 10 && this.currentFrontPoint >= 10;
+      backSkillTreeInnerStyle() {
+        const border = (this.currentBackendPoint / this.backendBorder) * 100;
+        return `background:linear-gradient(180deg,dodgerblue -30%,dodgerblue ${border}%,grey ${border}%,grey 150%);`;
       },
-      clickableFront4() {
-        return this.currentBasePoint >= 10 && this.currentFrontPoint >= 15;
-      },
-      clickableFront5() {
-        return this.currentBasePoint >= 10 && this.currentFrontPoint >= 20;
-      },
-      clickableFront6() {
-        return this.currentBasePoint >= 10 && this.currentFrontPoint >= 25;
-      },
-      clickableFront7() {
-        return this.currentBasePoint >= 10 && this.currentFrontPoint >= 30;
-      },
-      clickableFront8() {
-        return this.currentBasePoint >= 10 && this.currentFrontPoint >= 35;
-      },
-      clickableFront9() {
-        return this.currentBasePoint >= 10 && this.currentFrontPoint >= 40;
-      },
-      clickableFront10() {
-        return this.currentBasePoint >= 10 && this.currentFrontPoint >= 45;
-      },
+      // ポイント加算条件
+      clickableBack1() {return this.currentBasePoint >= this.baseBorder;},
+      clickableBack2() {return this.currentBasePoint >= this.baseBorder && this.currentBackendPoint >= 3 * 1;},
+      clickableBack3() {return this.currentBasePoint >= this.baseBorder && this.currentBackendPoint >= 3 * 2;},
+      clickableBack4() {return this.currentBasePoint >= this.baseBorder && this.currentBackendPoint >= 3 * 3;},
+      clickableBack5() {return this.currentBasePoint >= this.baseBorder && this.currentBackendPoint >= 3 * 4;},
+      clickableBack6() {return this.currentBasePoint >= this.baseBorder && this.currentBackendPoint >= 3 * 5;},
+      clickableBack7() {return this.currentBasePoint >= this.baseBorder && this.currentBackendPoint >= 3 * 6;},
+      clickableBack8() {return this.currentBasePoint >= this.baseBorder && this.currentBackendPoint >= 3 * 7;},
+      clickableBack9() {return this.currentBasePoint >= this.baseBorder && this.currentBackendPoint >= 3 * 8;},
+      clickableBack10() {return this.currentBasePoint >= this.baseBorder && this.currentBackendPoint >= 3 * 9;},
     }
   }
 </script>
@@ -359,6 +549,18 @@
 
   #frontend-skilltree-title {
     color: lawngreen;
+    -webkit-text-stroke: 2px black;
+    text-stroke: 2px black;
+    font-weight: 900;
+    font-size: 50px;
+
+    position: absolute;
+    bottom: -50px;
+    z-index: 1;
+  }
+
+  #backend-skilltree-title {
+    color: lightblue;
     -webkit-text-stroke: 2px black;
     text-stroke: 2px black;
     font-weight: 900;
