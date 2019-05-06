@@ -1,6 +1,6 @@
 <template lang="pug">
   // skill 説明のcard？？
-  div.skill-card
+  div.skill-card(:style="cardPosition")
     div.inner-skill-card.px-3.pt-2
       h3.skill-card-title {{skillName}}
       p.skill-card-desc
@@ -18,7 +18,27 @@
 
 <script>
   export default {
-    props: ["skill-name", "skill-main-desc", "skill-desc", "current-point", "max-point", "skill-point-text"]
+    props: ["skill-name", "skill-main-desc", "skill-desc", "current-point", "max-point", "skill-point-text", "position"],
+    computed: {
+      cardPosition() {
+        console.log(this.position);
+        switch (this.position) {
+          case "under":
+            return "";
+            break;
+          case "right":
+            break;
+          case "left":
+            break;
+          case "top":
+            return `top: 400px;`
+            break;
+          default:
+            return "";
+            break;
+        }
+      }
+    }
   }
 </script>
 

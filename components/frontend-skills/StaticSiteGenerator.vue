@@ -15,7 +15,8 @@
     :skill-desc="skillDesc"
     :current-point="currentPoint"
     :max-point="maxPoint"
-    :skill-point-text="skillPointText")
+    :skill-point-text="skillPointText"
+    position="top")
 
 </template>
 
