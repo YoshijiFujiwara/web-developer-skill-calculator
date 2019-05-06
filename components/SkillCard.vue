@@ -53,39 +53,39 @@
 
       .skill-card-title {
         font-weight: 900;
-        font-size: 30px;
+        font-size: 35px;
         color: #7ee8ea;
       }
 
       .skill-card-desc {
         font-weight: 900;
-        font-size: 17px;
+        font-size: 20px;
         color: white;
 
         .skill-card-desc-feature {
           color: #f7d84b;
-          font-size: 18px;
+          font-size: 21px;
         }
       }
 
       .skill-card-current {
         font-weight: 900;
-        font-size: 17px;
+        font-size: 20px;
         color: white;
 
         .label {
-          font-size: 19px;
+          font-size: 22px;
           margin-bottom: 0px;
         }
       }
 
       .skill-card-next-level {
-        color: #bc5139;
-        font-size: 17px;
+        color: #ff5454;
+        font-size: 20px;
         font-weight: 900;
 
         .label {
-          font-size: 19px;
+          font-size: 22px;
           margin-bottom: 0px;
         }
       }

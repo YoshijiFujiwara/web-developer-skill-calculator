@@ -20,7 +20,7 @@
 </template>
 
 <script>
-  import designpattern from '~/assets/images/designpattern.png';
+  import designpattern from '~/assets/images/pattern.png';
   import Skill from '~/components/Skill';
   import SkillCard from '~/components/SkillCard';
 

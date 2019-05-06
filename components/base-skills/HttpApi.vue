@@ -20,7 +20,7 @@
 </template>
 
 <script>
-  import httpapi from '~/assets/images/httpapi.png';
+  import httpapi from '~/assets/images/api.png';
   import Skill from '~/components/Skill';
   import SkillCard from '~/components/SkillCard';
 
@@ -49,11 +49,11 @@
     },
     watch: {
       currentPoint() {
-        this.$emit('set-skill-points', 'httpapi', this.currentPoint);
+        this.$emit('set-skill-points', 'baseHttpapi', this.currentPoint);
       }
     },
     created() {
-      this.$emit('set-skill-points', 'httpapi', this.currentPoint);
+      this.$emit('set-skill-points', 'baseHttpapi', this.currentPoint);
     }
   }
 </script>

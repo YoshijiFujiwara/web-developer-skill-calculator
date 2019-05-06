@@ -2,9 +2,9 @@
   div.skill(:style="edgeColor")
     div.inner-skill
       v-img.skill-image(contain :src="imgSrc")
-      div.point-display(:style="edgeColor" v-if="clickable")
-        span.point-span
-          p.text-xs-center.point-text {{currentPoint}}/{{maxPoint}}
+    div.point-display(:style="edgeColor" v-if="clickable")
+      span.point-span
+        p.text-xs-center.point-text {{currentPoint}}/{{maxPoint}}
 
 </template>
 
@@ -23,7 +23,7 @@
         } else if (this.currentPoint < this.maxPoint) {
           color = "red";
         } else if (this.currentPoint === this.maxPoint) {
-          color = "green";
+          color = "#19ff00";
         }
 
         return `background-color: ${color}`;
@@ -41,7 +41,7 @@
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
-    border: double 7px black;
+    border: double 8px black;
     position: relative;
 
     .inner-skill {
@@ -52,6 +52,7 @@
       -webkit-border-radius: 15px;
       -moz-border-radius: 15px;
       border-radius: 15px;
+      overflow: hidden;
     }
   }
 

@@ -19,7 +19,7 @@
 </template>
 
 <script>
-  import license from '~/assets/images/license.png';
+  import license from '~/assets/images/file.png';
   import Skill from '~/components/Skill';
   import SkillCard from '~/components/SkillCard';
 

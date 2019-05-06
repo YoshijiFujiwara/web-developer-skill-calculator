@@ -20,7 +20,7 @@
 </template>
 
 <script>
-  import solidkiss from '~/assets/images/solidkiss.png';
+  import solidkiss from '~/assets/images/kiss.png';
   import Skill from '~/components/Skill';
   import SkillCard from '~/components/SkillCard';
 

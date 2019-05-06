@@ -20,7 +20,7 @@
 </template>
 
 <script>
-  import datastruc from '~/assets/images/datastruc.png';
+  import datastruc from '~/assets/images/blueprint.png';
   import Skill from '~/components/Skill';
   import SkillCard from '~/components/SkillCard';
 

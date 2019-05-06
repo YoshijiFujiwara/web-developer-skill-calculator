@@ -20,7 +20,7 @@
 </template>
 
 <script>
-  import github from '~/assets/images/github.png';
+  import github from '~/assets/images/github-logo.png';
   import Skill from '~/components/Skill';
   import SkillCard from '~/components/SkillCard';
 

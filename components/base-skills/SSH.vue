@@ -20,7 +20,7 @@
 </template>
 
 <script>
-  import ssh from '~/assets/images/ssh.png';
+  import ssh from '~/assets/images/computer.png';
   import Skill from '~/components/Skill';
   import SkillCard from '~/components/SkillCard';
 

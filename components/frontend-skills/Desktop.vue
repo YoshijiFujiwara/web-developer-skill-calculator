@@ -1,7 +1,7 @@
 <template lang="pug">
   div
     // skill
-    skill(:img-src="git"
+    skill(:img-src="img"
     :clickable="clickable"
     :max-point="maxPoint"
     :current-point="currentPoint"
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-  import git from '~/assets/images/git.png';
+  import img from '~/assets/images/electron.png';
   import Skill from '~/components/Skill';
   import SkillCard from '~/components/SkillCard';
 
@@ -33,7 +33,7 @@
     },
     data() {
       return {
-        git,
+        img,
         maxPoint: 3,
         currentPoint: 0,
         skillDescShow: false,

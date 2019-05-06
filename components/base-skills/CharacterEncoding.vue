@@ -20,7 +20,7 @@
 </template>
 
 <script>
-  import charEnco from '~/assets/images/char-enco.png';
+  import charEnco from '~/assets/images/icon.png';
   import Skill from '~/components/Skill';
   import SkillCard from '~/components/SkillCard';
 

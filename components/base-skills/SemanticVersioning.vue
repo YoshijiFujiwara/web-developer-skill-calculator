@@ -20,7 +20,7 @@
 </template>
 
 <script>
-  import semantic from '~/assets/images/semantic-versioning.png';
+  import semantic from '~/assets/images/sort-by-numeric-order.png';
   import Skill from '~/components/Skill';
   import SkillCard from '~/components/SkillCard';
 

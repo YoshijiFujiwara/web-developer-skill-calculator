@@ -129,12 +129,55 @@
               more(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableBack10")
 
         // dev-ops tree
-        div.skilltree#devops-tree.ml-3
+        div.skilltree#devops-tree.mr-3(:style="devopsSkillTreeStyle")
+          div.inner-skilltree.px-2.pt-3(:style="devopsSkillTreeInnerStyle")
+            h1#devops-skilltree-title DEVOPS {{currentDevopsPoint}}
+            // 第1階層(言語一覧)
+            v-layout.mb-3(row justify-space-between)
+              dev-python(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableDevops1")
+              dev-ruby-skill(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableDevops1")
+              dev-node(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableDevops1")
+            // 第1階層(言語一覧)
+            v-layout.mb-3(row justify-space-between)
+              dev-golang(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableDevops1")
+              dev-rust(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableDevops1")
+              cplusplus(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableDevops1")
+            // 第2階層
+            v-layout.mb-3(row justify-center)
+              o-s-concept(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableDevops2")
+            // 第3階層
+            v-layout.mb-3(row justify-space-between)
+              managing-server-o-s(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableDevops3")
+              managing-server-terminal(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableDevops3")
+            // 第4階層
+            v-layout.mb-3(row justify-space-between)
+              network-and-security(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableDevops4")
+              firewall(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableDevops4")
+              setup-webserver(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableDevops4")
+            // 第5階層
+            v-layout.mb-3(row justify-space-between)
+              container(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableDevops5")
+              configuration-management(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableDevops5")
+              container-orchestration(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableDevops5")
+            // 第6階層
+            v-layout.mb-3(row justify-center)
+              infra-provisioning(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableDevops6")
+            // 第7階層
+            v-layout.mb-3(row justify-center)
+              c-i-c-d(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableDevops7")
+            // 第8階層
+            v-layout.mb-3(row justify-space-between)
+              infrast-monitoring(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableDevops8")
+              application-monitoring(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableDevops8")
+              log-management(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableDevops8")
+            // 第9階層
+            v-layout.mb-3(row justify-center)
+              cloud-provider(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableDevops9")
+
 
 </template>
 
 <script>
-  import star from '~/assets/images/star.png';
   import Skill from '~/components/Skill';
   // basic skills
   import Git from '~/components/base-skills/Git';
@@ -210,6 +253,28 @@
   import WebServer from '~/components/backend-skills/WebServer';
   import WebSocket from '~/components/backend-skills/WebSocket';
 
+  // devops
+  import DevPython from '~/components/devops-skills/lang/Python';
+  import DevGolang from '~/components/devops-skills/lang/Golang';
+  import DevNode from '~/components/devops-skills/lang/Node';
+  import DevRubySkill from '~/components/devops-skills/lang/Ruby';
+  import DevRust from '~/components/devops-skills/lang/Rust';
+  import Cplusplus from '~/components/devops-skills/lang/C++';
+  import ApplicationMonitoring from '~/components/devops-skills/ApplicationMonitoring';
+  import CICD from '~/components/devops-skills/Cicd';
+  import CloudProvider from '~/components/devops-skills/CloudProvider';
+  import ConfigurationManagement from '~/components/devops-skills/ConfigurationManagement';
+  import Container from '~/components/devops-skills/Container';
+  import ContainerOrchestration from '~/components/devops-skills/ContainerOrchestration';
+  import Firewall from '~/components/devops-skills/Firewall';
+  import InfraProvisioning from '~/components/devops-skills/InfraProvisioning';
+  import InfrastMonitoring from '~/components/devops-skills/InfrastMonitoring';
+  import LogManagement from '~/components/devops-skills/LogManagement';
+  import ManagingServerOS from '~/components/devops-skills/ManagingServerOS';
+  import ManagingServerTerminal from '~/components/devops-skills/ManagingServerTerminal';
+  import NetworkAndSecurity from '~/components/devops-skills/NetworkAndSecurity';
+  import OSConcept from '~/components/devops-skills/OSConcept';
+  import SetupWebserver from '~/components/devops-skills/SetupWebserver';
 
   export default {
     components: {
@@ -282,11 +347,32 @@
       TestForPracticalStep,
       BackendTesting,
       WebServer,
-      WebSocket
+      WebSocket,
+
+      DevPython,
+      DevGolang,
+      DevNode,
+      DevRubySkill,
+      DevRust,
+      Cplusplus,
+      ApplicationMonitoring,
+      CICD,
+      CloudProvider,
+      ConfigurationManagement,
+      Container,
+      ContainerOrchestration,
+      Firewall,
+      InfraProvisioning,
+      InfrastMonitoring,
+      LogManagement,
+      ManagingServerOS,
+      ManagingServerTerminal,
+      NetworkAndSecurity,
+      OSConcept,
+      SetupWebserver
     },
     data() {
       return {
-        star,
         skillDialog: false,
 
         // それぞれのスキルツリーの基準値
@@ -310,6 +396,7 @@
         baseLicense: 0,
         baseSemantic: 0,
         baseSsh: 0,
+        baseHttpapi: 0,
         baseDesignPattern: 0,
         baseCharacterEncoding: 0,
 
@@ -372,6 +459,30 @@
         backBackendTesting: 0,
         backWebServer: 0,
         backWebSocket: 0,
+
+        // devopsのそれぞれのポイント
+        devopsNode: 0,
+        devopsPython: 0,
+        devopsRubySkill: 0,
+        devopsRust: 0,
+        devopsGolang: 0,
+        devopsCplusplus: 0,
+
+        devopsApplicationMonitoring: 0,
+        devopsCICD: 0,
+        devopsCloudProvider: 0,
+        devopsConfigurationManagement: 0,
+        devopsContainer: 0,
+        devopsContainerOrchestration: 0,
+        devopsFirewall: 0,
+        devopsInfraProvisioning: 0,
+        devopsInfrastMonitoring: 0,
+        devopsLogManagement: 0,
+        devopsManagingServerOS: 0,
+        devopsManagingServerTerminal: 0,
+        devopsNetworkAndSecurity: 0,
+        devopsOSConcept: 0,
+        devopsSetupWebserver: 0,
       }
     },
     methods: {
@@ -393,7 +504,7 @@
       // base
       currentBasePoint() {
         const sum = this.baseGit + this.baseTerminal + this.baseDataStructure + this.baseSolid + this.baseGithub + this.baseLicense +
-                    this.baseSemantic + this.baseSsh + this.baseDesignPattern + this.baseCharacterEncoding;
+                    this.baseSemantic + this.baseSsh + this.baseDesignPattern + this.baseCharacterEncoding + this.baseHttpapi;
 
         return sum;
       },
@@ -438,7 +549,6 @@
       clickableFront9() {return this.currentBasePoint >= this.baseBorder && this.currentFrontPoint >= 3 * 8;},
       clickableFront10() {return this.currentBasePoint >= this.baseBorder && this.currentFrontPoint >= 3 * 9;},
 
-
       // backend
       currentBackendPoint() {
         const sum = this.backClojure + this.backElixir + this.backErlang + this.backHaskell + this.backGolang + this.backHaskell + this.backJava +
@@ -471,6 +581,37 @@
       clickableBack8() {return this.currentBasePoint >= this.baseBorder && this.currentBackendPoint >= 3 * 7;},
       clickableBack9() {return this.currentBasePoint >= this.baseBorder && this.currentBackendPoint >= 3 * 8;},
       clickableBack10() {return this.currentBasePoint >= this.baseBorder && this.currentBackendPoint >= 3 * 9;},
+
+      // devops
+      currentDevopsPoint() {
+        const sum = this.devopsNode + this.devopsPython + this.devopsRubySkill + this.devopsRust + this.devopsGolang + this.devopsCplusplus +
+                      this.devopsApplicationMonitoring + this.devopsCICD + this.devopsCloudProvider + this.devopsConfigurationManagement +
+                      this.devopsContainer + this.devopsContainerOrchestration + this.devopsFirewall + this.devopsInfraProvisioning +
+                      this.devopsInfrastMonitoring + this.devopsLogManagement + this.devopsManagingServerOS + this.devopsManagingServerTerminal +
+                      this.devopsNetworkAndSecurity + this.devopsOSConcept + this.devopsSetupWebserver;
+        return sum;
+      },
+      devopsSkillTreeStyle() {
+        if (this.currentDevopsPoint < this.backendBorder) {
+          return `background-color: lightgrey`;
+        } else {
+          return `background-color: orangered`;
+        }
+      },
+      devopsSkillTreeInnerStyle() {
+        const border = (this.currentDevopsPoint / this.backendBorder) * 100;
+        return `background:linear-gradient(180deg,red -30%,red ${border}%,grey ${border}%,grey 150%);`;
+      },
+      // ポイント加算条件
+      clickableDevops1() {return this.currentBasePoint >= this.baseBorder;},
+      clickableDevops2() {return this.currentBasePoint >= this.baseBorder && this.currentDevopsPoint >= 3 * 1;},
+      clickableDevops3() {return this.currentBasePoint >= this.baseBorder && this.currentDevopsPoint >= 3 * 2;},
+      clickableDevops4() {return this.currentBasePoint >= this.baseBorder && this.currentDevopsPoint >= 3 * 3;},
+      clickableDevops5() {return this.currentBasePoint >= this.baseBorder && this.currentDevopsPoint >= 3 * 4;},
+      clickableDevops6() {return this.currentBasePoint >= this.baseBorder && this.currentDevopsPoint >= 3 * 5;},
+      clickableDevops7() {return this.currentBasePoint >= this.baseBorder && this.currentDevopsPoint >= 3 * 6;},
+      clickableDevops8() {return this.currentBasePoint >= this.baseBorder && this.currentDevopsPoint >= 3 * 7;},
+      clickableDevops9() {return this.currentBasePoint >= this.baseBorder && this.currentDevopsPoint >= 3 * 8;},
     }
   }
 </script>
@@ -519,7 +660,7 @@
 
   .skilltree {
     position: relative;
-    height: 1400px;
+    height: 1320px;
     width: 500px;
     -webkit-border-top-left-radius: 40px;
     -webkit-border-bottom-right-radius: 40px;
@@ -561,6 +702,18 @@
 
   #backend-skilltree-title {
     color: lightblue;
+    -webkit-text-stroke: 2px black;
+    text-stroke: 2px black;
+    font-weight: 900;
+    font-size: 50px;
+
+    position: absolute;
+    bottom: -50px;
+    z-index: 1;
+  }
+
+  #devops-skilltree-title {
+    color: orangered;
     -webkit-text-stroke: 2px black;
     text-stroke: 2px black;
     font-weight: 900;
