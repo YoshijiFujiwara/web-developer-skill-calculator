@@ -34,24 +34,28 @@
     data() {
       return {
         git,
-        maxPoint: 1,
+        maxPoint: 5,
         currentPoint: 0,
         skillDescShow: false,
-        skillName: "Web Assembly",
-        skillMainDesc: "wa。",
-        skillDesc: "Web Assemblyを使いこなせる。",
+        skillName: "CSS in JS",
+        skillMainDesc: "CSS in JS。",
+        skillDesc: "。",
         skillPointText: {
-          1: "Web Assemblyを使いこなせる",
+          1: "Styled Componentsについて理解している",
+          2: "CSSモジュールを理解している",
+          3: "Emotion, Radium, Glamorousのうち１つを使いこなせる",
+          4: "Emotion, Radium, Glamorousのうち２つを使いこなせる",
+          5: "Emotion, Radium, Glamorousのうちすべてを使いこなせる",
         }
       }
     },
     watch: {
       currentPoint() {
-        this.$emit('set-skill-points', 'frontWebAssembly', this.currentPoint);
+        this.$emit('set-skill-points', 'frontTesting', this.currentPoint);
       }
     },
     created() {
-      this.$emit('set-skill-points', 'frontWebAssembly', this.currentPoint);
+      this.$emit('set-skill-points', 'frontTesting', this.currentPoint);
     }
   }
 </script>

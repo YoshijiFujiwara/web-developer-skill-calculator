@@ -39,13 +39,13 @@
         skillDescShow: false,
         skillName: "pwa",
         skillMainDesc: "pwa。",
-        skillDesc: "プログラムのソースコードなどの変更履歴を記録・追跡するための、分散型バージョン管理システムを利用し、開発の効率を上げることができる。",
+        skillDesc: "Progressive Web Applicationを作ることができる。",
         skillPointText: {
-          1: "バージョン管理ツールについて、聞いたことがある",
-          2: "gitを使ったことがある",
-          3: "gitの基本的なコマンドを把握している",
-          4: "gitの応用的なコマンドを把握している",
-          5: "gitを毎日使い、どんなことにも対処することができる",
+          1: "Storage, Web Sockets, Service Workerについて理解している",
+          2: "PRPLパターンを理解している",
+          3: "RAIL モデルを理解している",
+          4: "パフォーマンスメトリクスを使用している",
+          5: "Light Houseなどのツールを使いこなせる",
         }
       }
     },

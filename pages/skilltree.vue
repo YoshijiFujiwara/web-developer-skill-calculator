@@ -46,7 +46,8 @@
               angular(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableFront5")
               vue-skill(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableFront5")
             // 第6階層
-            v-layout.mb-3(row justify-center)
+            v-layout.mb-3(row justify-space-between)
+              css-in-js(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableFront6")
               test(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableFront6")
             // 第7階層
             v-layout.mb-3(row justify-center)
@@ -103,6 +104,7 @@
   import React from '~/components/frontend-skills/React';
   import Angular from '~/components/frontend-skills/Angular';
   import VueSkill from '~/components/frontend-skills/Vue';
+  import CssInJs from '~/components/frontend-skills/CssInJs';
   import Test from '~/components/frontend-skills/Test';
   import Pwa from '~/components/frontend-skills/Pwa';
   import TypeChecker from '~/components/frontend-skills/TypeChecker';
@@ -139,6 +141,7 @@
       React,
       Angular,
       VueSkill,
+      CssInJs,
       Test,
       Pwa,
       TypeChecker,

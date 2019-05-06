@@ -34,18 +34,15 @@
     data() {
       return {
         git,
-        maxPoint: 5,
+        maxPoint: 2,
         currentPoint: 0,
         skillDescShow: false,
-        skillName: "mobile application",
+        skillName: "モバイルアプリケーション",
         skillMainDesc: "mobile application。",
-        skillDesc: "プログラムのソースコードなどの変更履歴を記録・追跡するための、分散型バージョン管理システムを利用し、開発の効率を上げることができる。",
+        skillDesc: "モバイルアプリケーションを作成することができる。",
         skillPointText: {
-          1: "バージョン管理ツールについて、聞いたことがある",
-          2: "gitを使ったことがある",
-          3: "gitの基本的なコマンドを把握している",
-          4: "gitの応用的なコマンドを把握している",
-          5: "gitを毎日使い、どんなことにも対処することができる",
+          1: "React Nativeでモバイルアプリケーションを作成することができる",
+          2: "NativeScriptでモバイルアプリケーションを作成することができる",
         }
       }
     },

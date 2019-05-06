@@ -34,18 +34,16 @@
     data() {
       return {
         git,
-        maxPoint: 5,
+        maxPoint: 3,
         currentPoint: 0,
         skillDescShow: false,
         skillName: "CSSプリプロセッサ",
         skillMainDesc: "CSSプリプロセッサ。",
-        skillDesc: "プログラムのソースコードなどの変更履歴を記録・追跡するための、分散型バージョン管理システムを利用し、開発の効率を上げることができる。",
+        skillDesc: "CSSのコーディングを効率的にできるスキル。",
         skillPointText: {
-          1: "バージョン管理ツールについて、聞いたことがある",
-          2: "gitを使ったことがある",
-          3: "gitの基本的なコマンドを把握している",
-          4: "gitの応用的なコマンドを把握している",
-          5: "gitを毎日使い、どんなことにも対処することができる",
+          1: "SASS, PostCSS, Lessのうち１つを使いこなせる",
+          2: "SASS, PostCSS, Lessのうち２つを使いこなせる",
+          3: "SASS, PostCSS, Lessのすべてを使いこなせる",
         }
       }
     },

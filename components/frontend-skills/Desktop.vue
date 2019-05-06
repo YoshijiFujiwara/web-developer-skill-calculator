@@ -34,18 +34,16 @@
     data() {
       return {
         git,
-        maxPoint: 5,
+        maxPoint: 3,
         currentPoint: 0,
         skillDescShow: false,
-        skillName: "desktop",
+        skillName: "デスクトップアプリケーション",
         skillMainDesc: "desktop。",
-        skillDesc: "プログラムのソースコードなどの変更履歴を記録・追跡するための、分散型バージョン管理システムを利用し、開発の効率を上げることができる。",
+        skillDesc: "デスクトップアプリケーションを作成することができる。",
         skillPointText: {
-          1: "バージョン管理ツールについて、聞いたことがある",
-          2: "gitを使ったことがある",
-          3: "gitの基本的なコマンドを把握している",
-          4: "gitの応用的なコマンドを把握している",
-          5: "gitを毎日使い、どんなことにも対処することができる",
+          1: "Electron, Proton Native, Carloのうち１つを使いこなせる",
+          2: "Electron, Proton Native, Carloのうち２つを使いこなせる",
+          3: "Electron, Proton Native, Carloのうちすべてを使いこなせる",
         }
       }
     },

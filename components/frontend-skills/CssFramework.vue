@@ -34,18 +34,17 @@
     data() {
       return {
         git,
-        maxPoint: 5,
+        maxPoint: 4,
         currentPoint: 0,
         skillDescShow: false,
         skillName: "CSSフレームワーク",
         skillMainDesc: "CSSフレームワーク。",
-        skillDesc: "プログラムのソースコードなどの変更履歴を記録・追跡するための、分散型バージョン管理システムを利用し、開発の効率を上げることができる。",
+        skillDesc: "CSSのフレームワークを用いて、効率的にデザインを行うことができる。",
         skillPointText: {
-          1: "バージョン管理ツールについて、聞いたことがある",
-          2: "gitを使ったことがある",
-          3: "gitの基本的なコマンドを把握している",
-          4: "gitの応用的なコマンドを把握している",
-          5: "gitを毎日使い、どんなことにも対処することができる",
+          1: "Bootstrap, Materialize CSS, Bulma, Semantic UIのうち１つを使いこなせる",
+          2: "Bootstrap, Materialize CSS, Bulma, Semantic UIのうち２つを使いこなせる",
+          3: "Bootstrap, Materialize CSS, Bulma, Semantic UIのうち３つを使いこなせる",
+          4: "Bootstrap, Materialize CSS, Bulma, Semantic UIのすべてを使いこなせる",
         }
       }
     },

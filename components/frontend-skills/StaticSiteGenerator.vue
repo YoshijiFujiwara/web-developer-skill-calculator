@@ -34,18 +34,14 @@
     data() {
       return {
         git,
-        maxPoint: 5,
+        maxPoint: 1,
         currentPoint: 0,
         skillDescShow: false,
-        skillName: "static site generator",
-        skillMainDesc: "static site generator。",
-        skillDesc: "プログラムのソースコードなどの変更履歴を記録・追跡するための、分散型バージョン管理システムを利用し、開発の効率を上げることができる。",
+        skillName: "静的サイトジェネレーター",
+        skillMainDesc: "静的サイトジェネレーター。",
+        skillDesc: "静的サイトジェネレーターを使いこなせる。",
         skillPointText: {
-          1: "バージョン管理ツールについて、聞いたことがある",
-          2: "gitを使ったことがある",
-          3: "gitの基本的なコマンドを把握している",
-          4: "gitの応用的なコマンドを把握している",
-          5: "gitを毎日使い、どんなことにも対処することができる",
+          1: "GatsbyJSを使いこなせる",
         }
       }
     },

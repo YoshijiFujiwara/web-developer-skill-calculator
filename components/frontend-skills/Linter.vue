@@ -39,13 +39,13 @@
         skillDescShow: false,
         skillName: "LinterFormatter",
         skillMainDesc: "LinterFormatter。",
-        skillDesc: "プログラムのソースコードなどの変更履歴を記録・追跡するための、分散型バージョン管理システムを利用し、開発の効率を上げることができる。",
+        skillDesc: "リアルタイム構文チェックツールで効率を上げることができる。",
         skillPointText: {
-          1: "バージョン管理ツールについて、聞いたことがある",
-          2: "gitを使ったことがある",
-          3: "gitの基本的なコマンドを把握している",
-          4: "gitの応用的なコマンドを把握している",
-          5: "gitを毎日使い、どんなことにも対処することができる",
+          1: "Prettire, ESLint, JSHint, JSLint, JSCSのうち１つを使いこなすことができる",
+          2: "Prettire, ESLint, JSHint, JSLint, JSCSのうち２つを使いこなすことができる",
+          3: "Prettire, ESLint, JSHint, JSLint, JSCSのうち３つを使いこなすことができる",
+          4: "Prettire, ESLint, JSHint, JSLint, JSCSのうち４つを使いこなすことができる",
+          5: "Prettire, ESLint, JSHint, JSLint, JSCSのすべてを使いこなすことができる",
         }
       }
     },

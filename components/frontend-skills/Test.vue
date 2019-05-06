@@ -34,18 +34,19 @@
     data() {
       return {
         git,
-        maxPoint: 5,
+        maxPoint: 6,
         currentPoint: 0,
         skillDescShow: false,
-        skillName: "test",
-        skillMainDesc: "test。",
-        skillDesc: "プログラムのソースコードなどの変更履歴を記録・追跡するための、分散型バージョン管理システムを利用し、開発の効率を上げることができる。",
+        skillName: "テスト",
+        skillMainDesc: "テストスキル。",
+        skillDesc: "アプリケーション開発時のテストの手法を理解している。",
         skillPointText: {
-          1: "バージョン管理ツールについて、聞いたことがある",
-          2: "gitを使ったことがある",
-          3: "gitの基本的なコマンドを把握している",
-          4: "gitの応用的なコマンドを把握している",
-          5: "gitを毎日使い、どんなことにも対処することができる",
+          1: "Unit, Integration, Functionalテストのうち１つを理解し、実践している",
+          2: "Unit, Integration, Functionalテストのうち２つを理解し、実践している",
+          3: "Unit, Integration, Functionalテストのうちすべてを理解し、実践している",
+          4: "Jest, Enzyme, Cypressのうち１つを理解し、使いこなせる",
+          5: "Jest, Enzyme, Cypressのうち２つを理解し、使いこなせる",
+          6: "Jest, Enzyme, Cypressのうちすべてを理解し、使いこなせる",
         }
       }
     },

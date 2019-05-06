@@ -34,18 +34,16 @@
     data() {
       return {
         git,
-        maxPoint: 5,
+        maxPoint: 3,
         currentPoint: 0,
         skillDescShow: false,
         skillName: "CSSアーキテクチャ",
         skillMainDesc: "CSSアーキテクチャ。",
-        skillDesc: "プログラムのソースコードなどの変更履歴を記録・追跡するための、分散型バージョン管理システムを利用し、開発の効率を上げることができる。",
+        skillDesc: "CSSアーキテクチャを理解し、保守性の高いコードの書き方ができる。",
         skillPointText: {
-          1: "バージョン管理ツールについて、聞いたことがある",
-          2: "gitを使ったことがある",
-          3: "gitの基本的なコマンドを把握している",
-          4: "gitの応用的なコマンドを把握している",
-          5: "gitを毎日使い、どんなことにも対処することができる",
+          1: "BEM, OOCSS, SMACSSのうち１つを理解し実践している",
+          2: "BEM, OOCSS, SMACSSのうち２つを理解し実践している",
+          3: "BEM, OOCSS, SMACSSのすべてを理解し実践している",
         }
       }
     },
