@@ -38,8 +38,8 @@
         currentPoint: 0,
         skillDescShow: false,
         skillName: "Elixir",
-        skillMainDesc: "Elixir。",
-        skillDesc: "",
+        skillMainDesc: "えりくさー。",
+        skillDesc: "BEAMと呼ばれるErlang(アーラン)仮想環境上で動作する関数型言語。",
         skillPointText: {
           1: "基本的な文法を理解している",
           2: "簡単なアプリケーションを作成できる",

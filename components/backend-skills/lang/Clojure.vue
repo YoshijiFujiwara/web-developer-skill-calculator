@@ -38,8 +38,8 @@
         currentPoint: 0,
         skillDescShow: false,
         skillName: "Clojure",
-        skillMainDesc: "Clojure。",
-        skillDesc: "",
+        skillMainDesc: "関数型プログラミング言語。",
+        skillDesc: "Java仮想マシン上で動くLisp系関数型言語である。",
         skillPointText: {
           1: "基本的な文法を理解している",
           2: "簡単なアプリケーションを作成できる",

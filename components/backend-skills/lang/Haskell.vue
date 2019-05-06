@@ -38,8 +38,8 @@
         currentPoint: 0,
         skillDescShow: false,
         skillName: "HasKell",
-        skillMainDesc: "Haskell。",
-        skillDesc: "",
+        skillMainDesc: "純粋な",
+        skillDesc: "関数型プログラミング言語である。",
         skillPointText: {
           1: "基本的な文法を理解している",
           2: "簡単なアプリケーションを作成できる",

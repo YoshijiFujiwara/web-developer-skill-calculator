@@ -38,8 +38,8 @@
         currentPoint: 0,
         skillDescShow: false,
         skillName: "Golang",
-        skillMainDesc: "Golang。",
-        skillDesc: "",
+        skillMainDesc: "マスコットが、、。",
+        skillDesc: "人気だ",
         skillPointText: {
           1: "基本的な文法を理解している",
           2: "簡単なアプリケーションを作成できる",

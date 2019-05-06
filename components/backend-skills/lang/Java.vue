@@ -38,8 +38,8 @@
         currentPoint: 0,
         skillDescShow: false,
         skillName: "Java",
-        skillMainDesc: "Java。",
-        skillDesc: "",
+        skillMainDesc: "重鎮。",
+        skillDesc: "いたるところで使われている。",
         skillPointText: {
           1: "基本的な文法を理解している",
           2: "簡単なアプリケーションを作成できる",

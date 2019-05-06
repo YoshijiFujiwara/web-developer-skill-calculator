@@ -38,8 +38,8 @@
         currentPoint: 0,
         skillDescShow: false,
         skillName: "Node.js",
-        skillMainDesc: "Node.js。",
-        skillDesc: "",
+        skillMainDesc: "サーバー側で動くようになった",
+        skillDesc: "Javascript。",
         skillPointText: {
           1: "基本的な文法を理解している",
           2: "簡単なアプリケーションを作成できる",

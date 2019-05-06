@@ -38,8 +38,8 @@
         currentPoint: 0,
         skillDescShow: false,
         skillName: "Erlang",
-        skillMainDesc: "Erlang。",
-        skillDesc: "",
+        skillMainDesc: "アーランと読む。",
+        skillDesc: "分散平行処理を主な目的としてエリクソンが開発した。現在はオープンソース化されている",
         skillPointText: {
           1: "基本的な文法を理解している",
           2: "簡単なアプリケーションを作成できる",

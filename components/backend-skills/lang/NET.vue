@@ -38,8 +38,8 @@
         currentPoint: 0,
         skillDescShow: false,
         skillName: ".NET",
-        skillMainDesc: ".NET。",
-        skillDesc: "",
+        skillMainDesc: "windows",
+        skillDesc: "系のシステムで動く。",
         skillPointText: {
           1: "基本的な文法を理解している",
           2: "簡単なアプリケーションを作成できる",
