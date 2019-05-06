@@ -36,6 +36,7 @@
         ssh,
         maxPoint: 3,
         currentPoint: 0,
+        skillDescShow: false,
         skillName: "ssh",
         skillMainDesc: "リモートコンピュータとの通信スキル。",
         skillDesc: "暗号や認証の技術を利用して、安全にリモートコンピュータと通信し、作業を行うことができる。",

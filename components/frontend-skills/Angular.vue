@@ -51,11 +51,11 @@
     },
     watch: {
       currentPoint() {
-        this.$emit('set-skill-points', 'git', this.currentPoint);
+        this.$emit('set-skill-points', 'frontAngular', this.currentPoint);
       }
     },
     created() {
-      this.$emit('set-skill-points', 'git', this.currentPoint);
+      this.$emit('set-skill-points', 'frontAngular', this.currentPoint);
     }
   }
 </script>

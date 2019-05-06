@@ -35,6 +35,7 @@
         charEnco,
         maxPoint: 3,
         currentPoint: 0,
+        skillDescShow: false,
         skillName: "文字エンコーディング",
         skillMainDesc: "文字コード把握スキル。",
         skillDesc: "文字コードについて理解している。",

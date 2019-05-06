@@ -6,64 +6,63 @@
         div#base-inner.px-2.pt-3(:style="baseSkillTreeInnerStyle")
           h1#base-skilltree-title BASE {{currentBasePoint}}
           v-layout(row justify-space-between)
-            git(v-on:set-skill-points="setBaseSkillPoint" :clickable="true")
-            basic-terminal-usage(v-on:set-skill-points="setBaseSkillPoint" :clickable="true")
-            data-structure(v-on:set-skill-points="setBaseSkillPoint" :clickable="true")
-            solid(v-on:set-skill-points="setBaseSkillPoint" :clickable="true")
-            git-hub(v-on:set-skill-points="setBaseSkillPoint" :clickable="true")
-            license(v-on:set-skill-points="setBaseSkillPoint" :clickable="true")
-            semantic-versioning(v-on:set-skill-points="setBaseSkillPoint" :clickable="true")
-            s-s-h(v-on:set-skill-points="setBaseSkillPoint" :clickable="true")
-            http-api(v-on:set-skill-points="setBaseSkillPoint" :clickable="true")
-            design-pattern(v-on:set-skill-points="setBaseSkillPoint" :clickable="true")
-            character-encoding(v-on:set-skill-points="setBaseSkillPoint" :clickable="true")
-      div {{currentBasePoint}}
+            git(v-on:set-skill-points="setCurrentSkillPoint" :clickable="true")
+            basic-terminal-usage(v-on:set-skill-points="setCurrentSkillPoint" :clickable="true")
+            data-structure(v-on:set-skill-points="setCurrentSkillPoint" :clickable="true")
+            solid(v-on:set-skill-points="setCurrentSkillPoint" :clickable="true")
+            git-hub(v-on:set-skill-points="setCurrentSkillPoint" :clickable="true")
+            license(v-on:set-skill-points="setCurrentSkillPoint" :clickable="true")
+            semantic-versioning(v-on:set-skill-points="setCurrentSkillPoint" :clickable="true")
+            s-s-h(v-on:set-skill-points="setCurrentSkillPoint" :clickable="true")
+            http-api(v-on:set-skill-points="setCurrentSkillPoint" :clickable="true")
+            design-pattern(v-on:set-skill-points="setCurrentSkillPoint" :clickable="true")
+            character-encoding(v-on:set-skill-points="setCurrentSkillPoint" :clickable="true")
       v-layout(row fluid)
         // front-end tree
-        div.skilltree#frontend-tree.mr-3
-          div.inner-skilltree.px-2.pt-3
-            h1#frontend-skilltree-title FRONTEND 12
+        div.skilltree#frontend-tree.mr-3(:style="frontSkillTreeStyle")
+          div.inner-skilltree.px-2.pt-3(:style="frontSkillTreeInnerStyle")
+            h1#frontend-skilltree-title FRONTEND {{currentFrontPoint}}
             // 第1階層
             v-layout.mb-3(row justify-space-between)
-              html-skill(v-on:set-skill-points="setBaseSkillPoint" :clickable="clickableFront1")
-              css-skill(v-on:set-skill-points="setBaseSkillPoint" :clickable="clickableFront1")
-              javascript(v-on:set-skill-points="setBaseSkillPoint" :clickable="clickableFront1")
+              html-skill(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableFront1")
+              css-skill(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableFront1")
+              javascript(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableFront1")
             // 第2階層
             v-layout.mb-3(row justify-center)
-              package-manager
+              package-manager(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableFront2")
             // 第3階層
             v-layout.mb-3(row justify-space-between)
-              css-preprocessor
-              css-framework
-              css-architecture
+              css-preprocessor(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableFront3")
+              css-framework(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableFront3")
+              css-architecture(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableFront3")
             // 第4階層
             v-layout.mb-3(row justify-space-between)
-              linter
-              module-bundler
-              task-runner
+              linter(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableFront4")
+              module-bundler(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableFront4")
+              task-runner(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableFront4")
             // 第5階層
             v-layout.mb-3(row justify-space-between)
-              react
-              angular
-              vue-skill
+              react(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableFront5")
+              angular(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableFront5")
+              vue-skill(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableFront5")
             // 第6階層
             v-layout.mb-3(row justify-center)
-              test
+              test(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableFront6")
             // 第7階層
             v-layout.mb-3(row justify-center)
-              type-checker
+              type-checker(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableFront7")
             // 第8階層
             v-layout.mb-3(row justify-space-between)
-              pwa
-              ssr
+              pwa(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableFront8")
+              ssr(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableFront8")
             // 第9階層
             v-layout.mb-3(row justify-space-between)
-              static-site-generator
-              mobile
-              desktop
+              static-site-generator(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableFront9")
+              mobile(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableFront9")
+              desktop(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableFront9")
             // 第10階層
             v-layout.mb-3(row justify-center)
-              web-assembly
+              web-assembly(v-on:set-skill-points="setCurrentSkillPoint" :clickable="clickableFront10")
 
         // back-end tree
         div.skilltree#backend-tree.mx-3
@@ -206,30 +205,8 @@
       },
 
       // base skillのポイントをセット
-      setBaseSkillPoint(name, currentPoint) {
-        switch (name) {
-          case 'git':
-            this.baseGit = currentPoint; break;
-          case 'terminal':
-            this.baseTerminal = currentPoint; break;
-          case 'datastruc':
-            this.baseDataStructure = currentPoint; break;
-          case 'solid':
-            this.baseSolid = currentPoint; break;
-          case 'github':
-            this.baseGithub = currentPoint; break;
-          case 'license':
-            this.baseLicense = currentPoint; break;
-          case 'semantic':
-            this.baseSemantic = currentPoint; break;
-          case 'ssh':
-            this.baseSsh = currentPoint; break;
-          case 'designpattern':
-            this.baseDesignPattern = currentPoint; break;
-          case 'char-enco':
-            this.baseCharacterEncoding = currentPoint; break;
-          default: break;
-        }
+      setCurrentSkillPoint(name, currentPoint) {
+        this[name] = currentPoint;
       },
     },
 
@@ -258,37 +235,48 @@
         const sum = this.frontHtml + this.frontCss + this.frontJavascript + this.frontPackageManager + this.frontCssPre + this.frontFramework + this.frontArchitecture + this.frontLinter + this.frontModuleBundler + this.frontTaskRunner + this.frontReact + this.frontAngular + this.frontVue + this.frontTesting + this.frontPwa + this.frontTypechecker + this.frontSsr + this.frontStaticSite + this.frontDesktop + this.frontMobile + this.frontWebAssembly;
         return sum;
       },
+      frontSkillTreeStyle() {
+        if (this.currentFrontPoint < 50) {
+          return `background-color: lightgrey`;
+        } else {
+          return `background-color: lightgreen`;
+        }
+      },
+      frontSkillTreeInnerStyle() {
+        const border = (this.currentFrontPoint / 50) * 100;
+        return `background:linear-gradient(180deg,green -30%,green ${border}%,grey ${border}%,grey 150%);`;
+      },
 
       // ポイント加算条件
       clickableFront1() {
         return this.currentBasePoint >= 10;
       },
       clickableFront2() {
-        return this.currentBasePoint >= 10;
+        return this.currentBasePoint >= 10 && this.currentFrontPoint >= 5;
       },
       clickableFront3() {
-        return this.currentBasePoint >= 10;
+        return this.currentBasePoint >= 10 && this.currentFrontPoint >= 10;
       },
       clickableFront4() {
-        return this.currentBasePoint >= 10;
+        return this.currentBasePoint >= 10 && this.currentFrontPoint >= 15;
       },
       clickableFront5() {
-        return this.currentBasePoint >= 10;
+        return this.currentBasePoint >= 10 && this.currentFrontPoint >= 20;
       },
       clickableFront6() {
-        return this.currentBasePoint >= 10;
+        return this.currentBasePoint >= 10 && this.currentFrontPoint >= 25;
       },
       clickableFront7() {
-        return this.currentBasePoint >= 10;
+        return this.currentBasePoint >= 10 && this.currentFrontPoint >= 30;
       },
       clickableFront8() {
-        return this.currentBasePoint >= 10;
+        return this.currentBasePoint >= 10 && this.currentFrontPoint >= 35;
       },
       clickableFront9() {
-        return this.currentBasePoint >= 10;
+        return this.currentBasePoint >= 10 && this.currentFrontPoint >= 40;
       },
       clickableFront10() {
-        return this.currentBasePoint >= 10;
+        return this.currentBasePoint >= 10 && this.currentFrontPoint >= 45;
       },
     }
   }

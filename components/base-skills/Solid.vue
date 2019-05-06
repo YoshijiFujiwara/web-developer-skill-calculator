@@ -36,6 +36,7 @@
         solidkiss,
         maxPoint: 3,
         currentPoint: 0,
+        skillDescShow: false,
         skillName: "SOLID, KISS, YAGNI",
         skillMainDesc: "プログラミングの原則的スキル。",
         skillDesc: "プログラミングの常識的な原則を抑えた上で、保守性の高いコーディングをすることができる。",

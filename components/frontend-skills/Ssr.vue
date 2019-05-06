@@ -1,7 +1,7 @@
 <template lang="pug">
   div
     // skill
-    skill(:img-src="ssh"
+    skill(:img-src="git"
     :clickable="clickable"
     :max-point="maxPoint"
     :current-point="currentPoint"
@@ -51,11 +51,11 @@
     },
     watch: {
       currentPoint() {
-        this.$emit('set-skill-points', 'git', this.currentPoint);
+        this.$emit('set-skill-points', 'frontSsr', this.currentPoint);
       }
     },
     created() {
-      this.$emit('set-skill-points', 'git', this.currentPoint);
+      this.$emit('set-skill-points', 'frontSsr', this.currentPoint);
     }
   }
 </script>

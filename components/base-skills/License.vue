@@ -35,6 +35,7 @@
         license,
         maxPoint: 3,
         currentPoint: 0,
+        skillDescShow: false,
         skillName: "ライセンス",
         skillMainDesc: "ライセンス管理スキル。",
         skillDesc: "OSSの各種ライセンスについて理解し、堅実なソフトウェア開発ができる。",

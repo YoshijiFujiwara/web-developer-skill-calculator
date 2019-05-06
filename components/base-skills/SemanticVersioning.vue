@@ -36,6 +36,7 @@
         semantic,
         maxPoint: 2,
         currentPoint: 0,
+        skillDescShow: false,
         skillName: "セマンティックバージョニング",
         skillMainDesc: "バージョンナンバー管理スキル。",
         skillDesc: "バージョンごとの理想的なナンバリング方法を知っており、使いこなすことができる。",

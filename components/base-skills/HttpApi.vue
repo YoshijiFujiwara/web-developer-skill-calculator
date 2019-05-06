@@ -36,6 +36,7 @@
         httpapi,
         maxPoint: 3,
         currentPoint: 0,
+        skillDescShow: false,
         skillName: "HTTP/HTTPS API",
         skillMainDesc: "通信プロトコル把握スキル。",
         skillDesc: "HTTP, HTTPSなどの通信プロトコルを理解し、また、APIについても理解している。",

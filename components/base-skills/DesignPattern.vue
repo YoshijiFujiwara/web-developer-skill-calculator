@@ -36,6 +36,7 @@
         designpattern,
         maxPoint: 3,
         currentPoint: 0,
+        skillDescShow: false,
         skillName: "デザインパターン",
         skillMainDesc: "設計パターン把握スキル。",
         skillDesc: "デザインパターンを把握し、大規模開発において効率的なプログラミングができる。",
