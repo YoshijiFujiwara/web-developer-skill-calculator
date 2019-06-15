@@ -1,22 +1,8 @@
-# portfolio2
+# ウェブ開発者のスキルツリー
+ウェブデベロッパーのロードマップ(https://github.com/kamranahmedse/developer-roadmap)を参考に、自分のスキルを計算できるサイトをVue.jsで作成しました。
+こだわった点は
 
-> My exquisite Nuxt.js project
+* それぞれのスキルポイントをVueコンポーネントのステートで管理。
+* 「BorderLands」というゲームのスキルツリーのUIにできるだけ似せた。
 
-## Build Setup
-
-``` bash
-# install dependencies
-$ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+です。技術的な面より、見た目にこだわったので、ポチポチしてみてください。
