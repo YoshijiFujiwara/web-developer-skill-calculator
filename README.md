@@ -1,5 +1,5 @@
 # ウェブ開発者のスキルツリー
-ウェブデベロッパーのロードマップ(https://github.com/kamranahmedse/developer-roadmap)を参考に、自分のスキルを計算できるサイトをVue.jsで作成しました。
+ウェブデベロッパーのロードマップ(https://github.com/kamranahmedse/developer-roadmap)  を参考に、自分のスキルを計算できるサイトをVue.jsで作成しました。
 こだわった点は
 
 * それぞれのスキルポイントをVueコンポーネントのステートで管理。
